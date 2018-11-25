@@ -108,9 +108,8 @@ class ParkingBoyFacts {
         Car car = new Car();
 
         ParkingTicket ticket = parkingBoy.park(car);
-        parkingBoy.fetch(ticket);
-
-        assertNull(parkingBoy.fetch(ticket));
+        parkingBoy.fetch(ticket); //get the car
+        assertNull(parkingBoy.fetch(ticket)); //get the car again, because it got once,so should be nothing here.
     }
 
     @Test
@@ -135,7 +134,7 @@ class ParkingBoyFacts {
         ParkingLot parkingLot = new ParkingLot(capacity);
         ParkingBoy parkingBoy = new ParkingBoy(parkingLot);
 
-        parkingBoy.park(new Car());
+        parkingBoy.park(new Car());//park jor one car,so no lots anymore
 
         assertNull(parkingBoy.park(new Car()));
     }
@@ -151,4 +150,21 @@ class ParkingBoyFacts {
 
         assertEquals("The parking lot is full.", parkingBoy.getLastErrorMessage());
     }
+
+//    @Test
+//    void should_park_cars_to_multiple_parking_lots_sequentially(){
+//        final int capacity =1;
+//        ParkingLot parkingLot1 = new ParkingLot(capacity);
+//        ParkingLot parkingLot2 = new ParkingLot(capacity);
+//        ParkingBoy parkingBoy = new ParkingBoy(parkingLot1,parkingLot2);
+//        Car car1 = new Car();
+//        Car car2 = new Car();
+//
+//        ParkingTicket ticket1 = ParkingBoy.park(car1);
+//        ParkingTicket ticket2 = ParkingBoy.park(car2);
+//
+//
+//    }
+
+
 }
