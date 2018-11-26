@@ -7,7 +7,6 @@ import java.util.Map;
 
 public class ParkingBoy {
 
-//    private final ParkingLot parkingLot;
     private List<ParkingLot> parkingLots;
     private String lastErrorMessage;
     private Map<ParkingTicket, ParkingLot> maplot = new HashMap<>();
@@ -15,7 +14,6 @@ public class ParkingBoy {
     public ParkingBoy(ParkingLot parkingLot) {
         parkingLots = new ArrayList<ParkingLot>();
         parkingLots.add(parkingLot);
-//        this.parkingLot = parkingLot;
     }
 
     public void addParkingLot(ParkingLot parkingLot){
@@ -45,9 +43,7 @@ public class ParkingBoy {
         }
         return null;
     }
-
-
-
+    
     public Car fetch(ParkingTicket ticket) {
         if (ticket == null) {
             lastErrorMessage = "Please provide your parking ticket.";
