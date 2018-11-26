@@ -43,7 +43,7 @@ public class ParkingBoy {
         }
         return null;
     }
-    
+
     public Car fetch(ParkingTicket ticket) {
         if (ticket == null) {
             lastErrorMessage = "Please provide your parking ticket.";
