@@ -152,7 +152,7 @@ class SmartParkingBoyTest {
     }
 
     @Test
-    void should_park_cars_to_multiple_parking_lots_sequentially(){
+    void should_park_cars_to_the_parking_lot_which_has_most_empty_parking_position(){
         final int capacity = 1;
         ParkingLot parkingLot1 = new ParkingLot(capacity);
         ParkingLot parkingLot2 = new ParkingLot();
